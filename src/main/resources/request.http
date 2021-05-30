@@ -9,7 +9,6 @@ Content-Type: application/json
 ###
 
 GET http://localhost:8345/users/1
-Auth: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1IiwiY3JlYXRlZEF0IjoiMjAyMS0wNS0yMlQxMzozNDo1Ni4yMzYyNDMiLCJyb2xlIjoiQURNSU4iLCJzdGF0ZSI6IkFDVElWRSIsImVtYWlsIjoibmV3VXNlcjRAbWFpbC5ydSJ9.VRMgBJ-_G_E7z5LaORGyMu-pfLwREiIgZsF7MhjKALU
 
 ###
 

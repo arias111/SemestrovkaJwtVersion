@@ -32,7 +32,7 @@ public class BasketDto {
             BasketDto basketDto = BasketDto.builder()
                     .id(product1.getId())
                     .name(product1.getName())
-                    .size(product1.getSize())
+//                    .size(product1.getSize())
                     .image(product1.getImageName())
                     .quantity(count)
                     .build();

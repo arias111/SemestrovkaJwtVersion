@@ -5,6 +5,7 @@ import com.spring.basics.models.User;
 import com.spring.basics.repositories.UsersRepository;
 import com.spring.basics.services.interfaces.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -41,8 +42,9 @@ public class UsersServiceImpl implements UsersService {
 
     @Override
     public UserDto getUserById(Long userId) {
-        Optional<User> user = usersRepository.findById(userId);
-        return UserDto.fromUser(user.orElse(User.builder().build()));
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        Optional<User> users = usersRepository.findById(userId);
+        return UserDto.fromUser(users.orElse(User.builder().build()));
     }
 
     @Override

@@ -18,14 +18,11 @@ public class Product  {
     private Long categoryId;
     @Column(name = "image_name")
     private String imageName;
-    private String size;
-    private String type;
 
     public static Product from(Product product) {
         return Product.builder()
                 .id(product.getId())
                 .name(product.getName())
-                .type(product.getType())
                 .imageName(product.getImageName())
                 .build();
     }
